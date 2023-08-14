@@ -55,3 +55,7 @@ markup blockquote {
 markup img {
     width: 100%;
 }
+
+markup code {
+    font-family: monospace;
+}

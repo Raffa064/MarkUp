@@ -131,8 +131,8 @@ function Markup(ITERATION_LIMIT = 100) {
         const VALUE = 1
         
         const symbols = [
-            ['&italic;', '*'],
-            ['&bold;', '**'],
+            ['&italic;', '**'],
+            ['&bold;', '*'],
             ['&strike;', '--'],
             ['&underline;', '__'],
             ['&mark;', '::'],
@@ -140,7 +140,7 @@ function Markup(ITERATION_LIMIT = 100) {
             ['&quote;', "''"],
             ['&bquote;', '""'],
             ['&par;', '('],
-            ['&bra;', ''],
+            ['&bra;', '['],
         ]
         
         for (const sym of symbols) {
