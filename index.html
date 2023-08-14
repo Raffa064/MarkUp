@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id='output'></p>
+    <script src="markup.js"></script>
+    <script>
+        const { parseMarkup } = Markup()
+        fetch('./README.mu').then(data => data.text().then((text) => {
+            output.innerHTML = parseMarkup(text)
+        }))
+    </script>
+</body>
+
+</html>
