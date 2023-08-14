@@ -46,8 +46,9 @@ function Markup(ITERATION_LIMIT = 100) {
         var end = 0
         var i = 0
         
-        while (i++< ITERATION_LIMIT && (start = line.indexOf(surroundA, end)) >= 0) {
+        while (i++ < ITERATION_LIMIT && (start = line.indexOf(surroundA, end)) >= 0) {
             end = line.indexOf(surroundB, start + surroundA.length)
+            if (end < 0) return line
 
             line = line.substring(0, start) + process(line.substring(start + surroundA.length, end)) + line.substring(end + surroundB.length, line.length)
         }

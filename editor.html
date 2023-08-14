@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MarkUp Live Editor</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas: 'L R';
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        #editor {
+            grid-area: L;
+            resize: none;
+            padding: 10px;
+            background: #111;
+            color: #aaa;
+            outline: none;
+            border: none;
+            border-right: 1px solid #08f;
+            overflow: scroll;
+        }
+
+        #output {
+            grid-area: R;
+            background: red;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="editor"></textarea>
+    <div id="output"></div>
+
+    <script src="markup.js"></script>
+    <script>
+        const editor = document.querySelector('#editor')
+        const output = document.querySelector('#output')
+        
+        const markup = Markup()
+        editor.oninput = () => {
+            output.innerHTML = markup.parseMarkup(editor.value)
+            localStorage.markup = editor.value
+        }
+        
+        editor.value = localStorage.markup || '(css)[./default.css]'
+        editor.oninput()
+    </script>
+</body>
+
+</html>
