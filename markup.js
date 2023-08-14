@@ -112,7 +112,6 @@ function Markup(ITERATION_LIMIT = 100) {
             }
         
             if (A == 'css') {
-                B = B.substring(1, B.length)
                 if (B.match(/(https?:\/\/[^\s]+)|([^\s]+)/g)) {
                     return '<link rel="stylesheet" href="' + B + '"/>'
                 }
