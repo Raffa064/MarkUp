@@ -28,6 +28,12 @@ function Markup(ITERATION_LIMIT = 100) {
             return ''
         }, line)
     }
+    
+    function applyList(line) {
+        return applyStartingBy('-', (line) => {
+            return '<li>'+line+'</li>'
+        }, line)
+    }
 
     function applyParagraph(line) {
         return applyStartingBy('  ', (line) => {
@@ -156,6 +162,7 @@ function Markup(ITERATION_LIMIT = 100) {
         for (var line of source.split('\n')) {
             line = applyHeading(line)
             line = applyComment(line)
+            line = applyList(line)
             line = applyParagraph(line)
             line = applyHorizontalRow(line)
             line = applyItalic(line)

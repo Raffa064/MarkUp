@@ -59,3 +59,13 @@ markup img {
 markup code {
     font-family: monospace;
 }
+
+markup li {
+    list-style: none;
+    padding-left: 2px;
+    margin-left: 10px;
+}
+
+markup li::before {
+    content: '\2022';
+}
