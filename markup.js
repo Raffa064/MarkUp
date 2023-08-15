@@ -31,13 +31,13 @@ function Markup(ITERATION_LIMIT = 100) {
     
     function applyList(line) {
         return applyStartingBy('-', (line) => {
-            return '<li>'+line+'</li>'
+            return '<li>'+line.trim()+'</li>'
         }, line)
     }
 
     function applyParagraph(line) {
         return applyStartingBy('  ', (line) => {
-            return '<p>' + line + '</p>'
+            return '<p>' + line.trim() + '</p>'
         }, line)
     }
 
@@ -158,7 +158,9 @@ function Markup(ITERATION_LIMIT = 100) {
     
     function parseMarkup(source) {
         var html = ''
-    
+        
+        source = source.replaceAll(String.fromCharCode(160), String.fromCharCode(32)) // Convert space 160 to 32 char code
+        
         for (var line of source.split('\n')) {
             line = applyHeading(line)
             line = applyComment(line)
