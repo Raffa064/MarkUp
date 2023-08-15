@@ -56,7 +56,7 @@ markup img {
     width: 100%;
 }
 
-markup code {
+markup code, markup code *{
     font-family: monospace;
 }
 
