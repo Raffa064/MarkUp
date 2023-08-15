@@ -7,7 +7,7 @@
   ""*OBS:* All this file are stylized by (this file)[./test.css]""
 ## How to use
   *Markup* is designed to run on frontend, so for use it, add these script tag into your html:
-"";;https://cdn.jsdelivr.net/gh/Raffa064/MarkUp@main/markup.js;;""
+"";;&lt;script src="https://cdn.jsdelivr.net/gh/Raffa064/MarkUp@main/markup.js">&lt;/script>;;""
 After it, you'll only need to get parseMarkup function and use it!
 "";;const { parseMarkup } = Markup()<br>const html = parseMarkup(content);;""
 ## Features
