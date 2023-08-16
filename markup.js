@@ -89,7 +89,7 @@ function Markup(ITERATION_LIMIT = 100) {
     }
     
     function applyMono(line) {
-        return applySurround(';;', 'code', line)
+        return applySurround(';;', 'pre', line)
     }
     
     function applyQuote(line) {
@@ -184,7 +184,16 @@ function Markup(ITERATION_LIMIT = 100) {
         return '<markup>' + html + '</markup>'
     }
     
+    function parseMarkupFile(url) {
+        return fetch(url)
+        .then(data => data.text())
+        .then(fileContent => {
+            return parseMarkup(fileContent)
+        })
+    }
+    
     return {
-        parseMarkup
+        parseMarkup,
+        parseMarkupFile
     }
 }

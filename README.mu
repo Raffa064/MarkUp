@@ -8,8 +8,10 @@
 ## How to use
   *Markup* is designed to run on frontend, so for use it, add these script tag into your html:
 "";;&lt;script src="https://cdn.jsdelivr.net/gh/Raffa064/MarkUp@main/markup.js">&lt;/script>;;""
-After it, you'll only need to get parseMarkup function and use it!
-"";;const { parseMarkup } = Markup()<br>const html = parseMarkup(content);;""
+After it, you'll only need to get **parseMarkup** function and use it!
+"";;const { parseMarkup } = Markup&par;)<br>const html = parseMarkup&par;content);;""
+  If you need to parse *Markup* from file, you can use **parseMarkupFile** instead, and it will return the parsed html in a promise:
+"";;parseMarkupFile(fileUrl).then&par;parsedHtml => {<br>    // Use parsedHtml<br>});;""
 ## Features
 ====
 - *Headings:* Line started by #

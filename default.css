@@ -50,13 +50,15 @@ markup blockquote {
     background: #333;
     margin-block: 10px;
     border-radius: 5px;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 markup img {
     width: 100%;
 }
 
-markup code, markup code *{
+markup pre, markup pre * {
     font-family: monospace;
 }
 

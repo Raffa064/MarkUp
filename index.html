@@ -20,10 +20,15 @@
     <p id='output'></p>
     <script src="markup.js"></script>
     <script>
-        const { parseMarkup } = Markup()
+        const { parseMarkupFile } = Markup()
+        parseMarkupFile('./README.mu').then(html => {
+            output.innerHTML = html
+        })
+        /*
         fetch('./README.mu').then(data => data.text().then((text) => {
-            output.innerHTML = parseMarkup(text)
+        output.innerHTML = parseMarkup(text)
         }))
+        */
     </script>
 </body>
 
