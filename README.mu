@@ -23,7 +23,7 @@ After it, you'll only need to get **parseMarkup** function and use it!
 - *Strike:* Text surrounded by &strike;
 - *Undeline:* Text surrounded by &underline;
 - *Mark:* Text surrounded by &mark;
-- *Mono Spaced:* Text surrounded by &mono;
+- *Mono Spaced:* Text ;;surrounded;; by &mono;
 - *Quote:* Text surrounded by &quote;
 - *Block quote:* Text surrounded by &bquote;
 - *Link:* Use text label and url like this &par;text)&bra;url]

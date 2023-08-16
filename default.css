@@ -59,6 +59,7 @@ markup img {
 }
 
 markup pre, markup pre * {
+    display: inline;
     font-family: monospace;
 }
 
